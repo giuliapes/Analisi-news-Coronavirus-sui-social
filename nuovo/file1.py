@@ -20,7 +20,7 @@ for status in tweepy.Cursor(api.search, q="from:Agenzia_Ansa #covid OR #Covid-19
     list_csv.append([status._json["full_text"], str(status.favorite_count), str(status.retweet_count), str(status.created_at)])
 
 
-with open('non1.csv', 'a', newline='') as file:
+with open('dati.csv', 'a', newline='') as file:
     writer = csv.writer(file, delimiter=';')
     writer.writerows(list_csv)
 
