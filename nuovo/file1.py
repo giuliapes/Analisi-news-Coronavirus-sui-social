@@ -6,6 +6,7 @@ import time
 import csv
 import argparse
 import datetime
+from csv import writer
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-h1',type=str,required=True,help='selezione del primo hashtag es:#covid')
@@ -17,6 +18,15 @@ parser.add_argument('-UI',type=str,required=True,help='sito es:Agenzia_Ansa')
 
 args=parser.parse_args()
 
+
+def append_list_as_row(file_name, list_of_elem):
+    # Open file in append mode
+    with open(file_name, 'a+', newline='') as write_obj:
+        # Create a writer object from csv module
+        csv_writer = writer(write_obj,delimiter=',')
+        # Add contents of list as last row in the csv file
+        csv_writer.writerow(list_of_elem)
+
 #userID = "Agenzia_ANSA"
 #legge le credenziali salvate nel file credenziali
 auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
@@ -26,14 +36,14 @@ api = tweepy.API(auth)
 today = datetime.date.today()
 
 # ["descrizione", "likes", "retweets", "data"] usare solo per la creazione del file csv poi eliminare da lista_csv
-list_csv = []
+list_csv = ["descrizione", "likes", "retweets", "data"]
+append_list_as_row('prd1.csv',list_csv)
 today = datetime.date.today()
 one_day = datetime.timedelta(days=1)
 yesterday= (today-one_day)
 for status in tweepy.Cursor(api.search, q="from:" + args.UI+" "+ args.h1 + " OR " + args.h2 +" OR "+ args.h3+ " OR "+ args.h4 +" OR "+ args.h5 + " since:" + str(yesterday)+ " until:" + str(today),tweet_mode='extended', lang='it').items():
-    list_csv.append([status._json["full_text"], str(status.favorite_count), str(status.retweet_count), str(status.created_at)])
+    append_list_as_row('prd1.csv',[status._json["full_text"], str(status.favorite_count), str(status.retweet_count), str(status.created_at)])
 
-
-with open('tutti_dati.csv', 'a', newline='') as file:
-    writer = csv.writer(file, delimiter=';')
-    writer.writerows(list_csv)
+#with open('prova1.csv', 'a', newline='') as file:
+#    writer = csv.writer(file, delimiter=';')
+#    writer.writerows(list_csv)
