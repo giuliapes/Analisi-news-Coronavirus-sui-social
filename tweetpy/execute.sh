@@ -9,6 +9,6 @@ has5='-h5 #Coronavirus'
 UI='-UI Agenzia_Ansa'
 cd /home/giulia/Scrivania/Reazioni-news-Coronavirus-sui-social/tweetpy
 
-/usr/bin/python3 file1.py $has1 $has2 $has3 $has4 $has5 $UI
+/usr/bin/python3 tweetpyFinal.py $has1 $has2 $has3 $has4 $has5 $UI
 
 echo "Script finished correctly"
