@@ -7,7 +7,7 @@ import argparse
 import datetime
 from csv import writer
 
-# definisco gli args
+# definisco gli args 
 parser = argparse.ArgumentParser()
 parser.add_argument('-h1',type=str,required=True,help='selezione del primo hashtag es:#covid')
 parser.add_argument('-h2',type=str,required=False,help='selezione del secondo hashtag es:#Covid-19')
