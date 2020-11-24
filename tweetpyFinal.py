@@ -7,7 +7,7 @@ import argparse
 import datetime
 from csv import writer
 
-# definisco gli args 
+# definisco gli args
 parser = argparse.ArgumentParser()
 parser.add_argument('-h1',type=str,required=True,help='selezione del primo hashtag es:#covid')
 parser.add_argument('-h2',type=str,required=False,help='selezione del secondo hashtag es:#Covid-19')
@@ -18,7 +18,7 @@ parser.add_argument('-UI',type=str,required=True,help='sito es:Agenzia_Ansa')
 
 args=parser.parse_args()
 
-# controlli sugli argomenti passati da terminale per non obbligare l'utente ad utilizzargli tutti
+# controlli sugli argomenti passati da terminale per non obbligare l'utente ad utilizzarli tutti
 # necessari per il corretto inserimento nella query di ricerca alla riga
 if(args.h2==None):
     ar2 = ''
@@ -39,11 +39,11 @@ else:
 
 # funzione per inserire in coda al file csv una lista di elementi
 def appendiInCsv(file_name, list_of_elem):
-    # Apro il file in modalità append, in modo che si possa scrivere in coda al contenuto del file
+    # Apre il file in modalità append, in modo che si possa scrivere in coda al contenuto del file
     with open(file_name, 'a+', newline='') as write_obj:
         #  Crea un oggetto writer dal modulo csv
         csv_writer = writer(write_obj,delimiter=';')
-        # Aggiungi il contenuto dell'elenco come ultima riga nel file csv
+        # Aggiunge il contenuto dell'elenco come ultima riga nel file csv
         csv_writer.writerow(list_of_elem)
 
 # legge le credenziali salvate nel file credenziali
@@ -57,9 +57,9 @@ api = tweepy.API(auth)
 
 # attraverso il modulo datetime ricavo il giorno odierno
 today = datetime.date.today()
-# creo una variabile one_day che vale 1 giorno
+# si crea una variabile one_day che vale 1 giorno
 one_day = datetime.timedelta(days=1)
-# creo una variabile yesterday per estrarre i dati del giorno precedente all'esecuzione del software
+# si crea una variabile yesterday per estrarre i dati del giorno precedente all'esecuzione del software
 yesterday= (today-one_day)
 # attraverso api.search seleziono i dati che voglio ricavare e la data dei dati che si vuole estrarre
 for status in tweepy.Cursor(api.search, q="from:" + args.UI+" "+ args.h1 + " OR " + ar2 +" OR "+ ar3+ " OR "+ ar4 +" OR "+ ar5 + " since:" + str(yesterday)+ " until:" + str(today),tweet_mode='extended', lang='it').items():
