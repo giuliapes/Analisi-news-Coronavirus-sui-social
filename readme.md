@@ -46,3 +46,5 @@ Software sviluppato in Python3 per l'estrazione automatica dei dati da Twitter. 
 `` `
 $ python3 tweetpyFinal.py -h1 "#covid" -h2 "#Covid-19" -h3 "#Coronavirus" -h4 "#tamponi" -h5 "#pandemia" -UI "Agenzia_Ansa"
 `` `
+![Image](https://user-images.githubusercontent.com/27484575/100906283-4f64a980-34c9-11eb-9a5c-038bc277863c.jpeg)
+
