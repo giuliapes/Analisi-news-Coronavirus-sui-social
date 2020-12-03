@@ -1,6 +1,6 @@
 # Tweetpy
 
-Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dati da Twitter. L'applicazione estrae dati riguardanti la pandemia di Coronavirus da una nota agenzia di informazione multimediale su Twitter. Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
+Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dati da Twitter. L'applicazione estrae dati riguardanti la pandemia di Coronavirus da una nota agenzia di informazione multimediale: Agenzia Ansa su Twitter. Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
 
 ## Requisiti
 
@@ -26,17 +26,17 @@ Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dat
 
 * Creare un account su https://developer.twitter.com/en e creare un'App compilando,in lingua inglese, i campi richiesti:
 	* Le informazioni generali: dove vivi, come vorresti chiamarti sull'App
-	* la sezione "In your words":le intenzioni per le quali si crea l'App di Twitter. Per gli studenti o i professori è necessario includere il nome della 		scuola, dell'insegnante e il numero del corso.
-	* la sezione "The specifics": 
-		* Descrizione di come verranno utilizzati i dati di Twitter e qualsiasi tipo di analisi dei dati che si intende svolgere. 
-		* Descrizione dell'utilizzo previsto delle funzionalità sopra citate.
-		* Elenco di tutte le entità governative a cui si itende fornire i contenuti di Twitter o informazioni derivate in questo caso d'uso.
+	* La sezione "In your words":le intenzioni per le quali si crea l'App di Twitter. Per gli studenti o i professori è necessario includere il nome della 		scuola, dell'insegnante e il numero del corso
+	* La sezione "The specifics": 
+		* Descrizione di come verranno utilizzati i dati di Twitter e qualsiasi tipo di analisi dei dati che si intende svolgere
+		* Descrizione dell'utilizzo previsto delle funzionalità sopra citate
+		* Elenco di tutte le entità governative a cui si itende fornire i contenuti di Twitter o informazioni derivate in questo caso d'uso
 
-* Ottenuta l'autorizzazione, accedere al portale per programmatori: https://developer.twitter.com/en/portal/dashboard e su dashboard nella sezione "Project App" selezionare l'icona con la chiave. Memorizzare le chiavi contenute nella sezione "API key & secret e Access token & secret".
-* sul file `credenziali.py` salvare le credenziali memorizzate precedentemente attraverso delle variabili, chiamate: TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN e TWITTER_ACCESS_TOKEN_SECRET.
-* eseguire il file `tweetpyFinal.py`, passando gli argomenti da linea di comando (vedi esempio).
-* in alternativa impostare il crontab in modo che l'estrazione dei dati avvenga in automatico a una determinata ora eseguendo il file execute.sh (accertandosi di inserire le parole chiavi all’interno del file) presente all’interno del progetto. Le informazioni per impostare il crontab: https://alvinalexander.com/linux/linux-crontab-file-format-example/.
-* i risultati verranno memorizzati nel file `dati.csv`.
+* Ottenuta l'autorizzazione, accedere al portale per programmatori: https://developer.twitter.com/en/portal/dashboard e su "Dashboard" nella sezione "Project App" selezionare l'icona con la chiave. Memorizzare le chiavi contenute nella sezione "API key & secret e Access token & secret"
+* Salvare nel file `credenziali.py` le credenziali memorizzate precedentemente attraverso delle variabili, chiamate: TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN e TWITTER_ACCESS_TOKEN_SECRET
+* Eseguire il file `tweetpyFinal.py`, passando gli argomenti da linea di comando (vedi esempio)
+* In alternativa impostare il crontab in modo che l'estrazione dei dati avvenga in automatico a una determinata ora eseguendo il file execute.sh (accertandosi di inserire le parole chiavi all’interno del file) presente all’interno del progetto. Le informazioni per impostare il crontab: https://alvinalexander.com/linux/linux-crontab-file-format-example/
+* I risultati verranno memorizzati nel file `dati.csv`
 
 ### Argomenti utilizzati:
 
