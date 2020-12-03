@@ -25,11 +25,10 @@ Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dat
 ## Utilizzo
 
 * Creare un account su https://developer.twitter.com/en e creare un'App compilando,in lingua inglese, i campi richiesti:
-	* Le informazioni generali: dove vivi, come vorresti chiamarti sull'App
-	* La sezione "In your words": descrizione dello scopo della creazione dell'App di Twitter. Per gli studenti o i professori è necessario includere il nome della 		scuola, dell'insegnante e il numero del corso
+	* La sezione "In your words": descrizione dello scopo della creazione dell'App. Per gli studenti o i professori è necessario includere il nome della 		scuola, dell'insegnante e il numero del corso
 	* La sezione "The specifics": 
 		* Descrizione di come verranno utilizzati i dati di Twitter e qualsiasi tipo di analisi dei dati che si intende svolgere
-		* Descrizione dell'utilizzo previsto delle funzionalità sopra citate
+		* Descrizione dell'utilizzo previsto per le funzionalità sopra citate
 		* Elenco di tutte le entità governative a cui si itende fornire i contenuti di Twitter o informazioni derivate in questo caso d'uso
 
 * Ottenuta l'autorizzazione, accedere al portale per programmatori: https://developer.twitter.com/en/portal/dashboard e su "Dashboard" nella sezione "Project App" selezionare l'icona con la chiave. Memorizzare le chiavi contenute nella sezione "API key & secret e Access token & secret"
