@@ -33,7 +33,7 @@ Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dat
 
 * Ottenuta l'autorizzazione, accedere al portale per programmatori: https://developer.twitter.com/en/portal/dashboard e su "Dashboard" nella sezione "Project App" selezionare l'icona con la chiave. Memorizzare le chiavi contenute nella sezione "API key & secret e Access token & secret"
 * Salvare nel file `credenziali.py` le credenziali memorizzate precedentemente attraverso delle variabili, chiamate: TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN e TWITTER_ACCESS_TOKEN_SECRET
-* Eseguire il file `tweetpyFinal.py`, passando gli argomenti da linea di comando (vedi esempio)
+* Eseguire il file `tweetpyFinal.py`, che estrae: descrizione tweet, numero di likes, numero di retweet e la data dei tweet. I dati estratti risultano precedenti di un giorno rispetto al giorno dell’estrazione stessa, per essere certi di non tralasciare nessun dato. Gli argomenti vengono passati da linea di comando (vedi esempio)
 * In alternativa impostare il crontab in modo che l'estrazione dei dati avvenga in automatico a una determinata ora eseguendo il file execute.sh (accertandosi di inserire le parole chiavi all’interno del file) presente all’interno del progetto. Le informazioni per impostare il crontab: https://alvinalexander.com/linux/linux-crontab-file-format-example/
 * I risultati verranno memorizzati nel file `dati.csv`
 
