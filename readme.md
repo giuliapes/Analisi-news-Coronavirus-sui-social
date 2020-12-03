@@ -1,6 +1,7 @@
 # Tweetpy
 
-Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dati da Twitter. L'applicazione estrae dati riguardanti la pandemia di Coronavirus da una nota agenzia di informazione multimediale: Agenzia Ansa su Twitter. Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
+Tweetpy è un Software sviluppato in Python3 per l'estrazione automatica dei dati da Twitter. L'applicazione estrae dati riguardanti la pandemia di Coronavirus da una nota agenzia di informazione multimediale. E’ stato individuato come miglior candidato il sito dell’Agenzia Ansa, in quanto presentano una tipologia di informazione trasparente e molto attiva sui canali digitali, per favorire la diffusione di contenuti e news in maniera indipendente accurata e affidabile. 
+Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
 
 ## Requisiti
 
