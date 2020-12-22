@@ -77,8 +77,8 @@ Extracting data from the Twitter news and microblogging service requires a licen
 
 Once you have obtained the license on Twitter for the App, you access the "Dashboard" where, in the “Project App” section, you can find the necessary keys: “API key & secret” and “Access token & secret”. 
 
- -- Install the modules listed in System requirements using python pip3: example: pip3 install csv
- -- Create the "credentials.py" file by inserting your credentials issued by the App into the variables
+ - Install the modules listed in System requirements using python pip3: example: pip3 install csv
+ - Create the "credentials.py" file by inserting your credentials issued by the App into the variables
 
 
 ## 5.2 Running the software
