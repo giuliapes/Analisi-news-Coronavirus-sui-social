@@ -110,7 +110,7 @@ description|likes|retweets| date
 
  Example of the manual execution:
 
-<i> python tweetpy -h1 "#Covid" -h2 "# Covid-19" -h3 "#Coronavirus" -h4 “#pandemic” -h5 “#swabs” -UI “Agenzia_Ansa”</i>
+<i> python tweetpy.py -h1 "#Covid" -h2 "# Covid-19" -h3 "#Coronavirus" -h4 “#pandemic” -h5 “#swabs” -UI “Agenzia_Ansa”</i>
 
 Output:
 description|likes|retweets|date
