@@ -91,7 +91,7 @@ The manual execution is performed by launching the tweetpy.py command, specifyin
 
 input:
 
-Parameter|Description|Exemple
+Parameter|Description| |Exemple
 --------|--------|--------|--------
   -h1  |  first hashtag to extract | Mandatory |-h1 "#Covid"
   -h2 | second hashtag to extract |  Not mandatory| -h2 "#Covid-19"
