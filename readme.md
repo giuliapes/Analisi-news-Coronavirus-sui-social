@@ -99,20 +99,55 @@ Parameter|Description| |Exemple
   -h4  |   fourth hashtag to be extracted | Not mandatory  | -h4 "#swabs"
   -h5  |  fifth hashtag to be extracted | Not mandatory| -h5 "#pandemic"
   -UI | username of the user profile whose hashtag you want to extract | Mandatory | -UI "Agenzia_Ansa"
+  
 
 As a result, the software extracts all the tweets related to the specified profile, containing the specified hashtags related to the day before the one when the script is launched. Consequently, the software produces the following output in csv format:
+
 
 description|likes|retweets| date
 --------|--------|--------|--------
  Contains the text of the tweet, it may contain additional hashtags beyond those specified, links to other users and the news link, which leads the user directly to the Agency website Ansa |  Contains the number of likes of other users in a given news | Contains the number of shares of a tweet. How many times that tweet has been shared by other users |Contains the date of publication of the tweet on the user profile
+ 
 
  Example of the manual execution:
 
 <i> python tweetpy -h1 "#Covid" -h2 "# Covid-19" -h3 "#Coronavirus" -h4 “#pandemic” -h5 “#swabs” -UI “Agenzia_Ansa”</i>
 
 Output:
+description|likes|retweets|date
+--------|--------|--------|--------
+La #Scala, a unique first time of the #Covid. Stellar cast, scenography and the anthem sung by the workers #ANSA @teatroallascala https://t.co/lqP3I2uTGX |  14 | 4 |2020-12-06 08:50:02
+#Covid-19 #Usa, over a million cases in 5 #ANSA days https://t.co/Y7MwDsYHkL |16| 10|2020-12-06 09:50:02
+#Covid: 18,887 new cases and 564 victims in Italy in the last 24 hours #ANSA https://t.co/cYSbib309p| 31  | 9 | 2020-12-06 19:39:50
+
+#Covid, #Abruzzo ordinance: from tomorrow out of the red zone. Marsilio: 'It turns orange, I informed Speranza'. But government sources: 'It has to wait for Wednesday. The deadline of 21 days must be respected. No endorsement of decision on tomorrow '#ANSA https://t.co/jBqnUixYth | 41 | 9 | 2020-12-06 21:30:28
+
+#Covid: Abruzzo ordinance in force tomorrow, shops reopen. Sources Region: 'Valid measures, the Government can only challenge them'. Boccia: 'Abruzzo will be warned if orange from tomorrow' #ANSA https://t.co/6PA48XW7rM https://t.co/bEDKQ5ELb9| 71 | 41 | -2020-12-06 22:17:46
+
+#Covid Bavaria declares a state of calamity , new restrictions 'We must do more'. Lockdown even more severe #ANSA https://t.co/nOucqM5M0p| 42 |11 |2020-12-06 22:32:33
 
 
+### 5.2.2 The automatic execution
+
+In this case, the execute.sh script is used, by taking the same input parameters as for the manual execution. Furthermore, the full path to the folder Tweetpy must also be specified.
+
+Next, the crontab must be configured to periodically execute the execute.sh script. In this way, every day you can download the given user’s tweets of the previous day, which contain the specified hashtags.
+
+
+Thanks to crontab, you can set up operations on the system with a certain simplicity using the "cron daemon". The latter reads the crontab file and executes the operations at the specified time. To specify the time and day when you want to run the file, you need to run from the command line:
+
+ <i>crontab -e </i>
+
+used to insert, modify or delete scheduled tasks. This will open the text editor where you will enter the scheduled task. 
+Each operation must necessarily contain the time and day of execution. It is also possible to insert more operations. To do this, it is necessary to start a new line. An example of setting the time and date is the following: 
+
+<i>00 00 * * * /usr/bin/execute.sh</i>
+
+In the specified operation, the cron daemon was instructed to execute the execute.sh command, every day at minute 00 hour 00 (midnight).  
+Before executing the command, you must enter in the order: minute, hour, day of the month, month, day of the week. 
+The symbol * is used to indicate all values. If it is used on the day of the month, as in the previous example, the command will run every day.  
+
+As final output, the script will produce the same output file as the tweetpy.py script, with the difference that the output file will be updated periodically.
 
 
 
