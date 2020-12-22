@@ -1,6 +1,6 @@
 # Tweetpy
 
-Software sviluppato in Python per l'estrazione automatica dei dati da Twitter. L'applicazione si concentra sull'estrazione di informazioni riguardanti il coronavirus da una nota agenzia di notizie su Twitter. Le informazioni estratte sono: descrizione della notizia (titolo e abstract), il numero di likes, il numero di retweets e la data del post stesso.
+Software sviluppato in Python per l'estrazione automatica dei dati da Twitter. L'applicazione si concentra sull'estrazione di informazioni riguardanti il coronavirus da una nota agenzia di notizie su Twitter. Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
 
 ## Requisiti
 
