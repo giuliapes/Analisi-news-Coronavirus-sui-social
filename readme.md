@@ -87,6 +87,34 @@ Once you have obtained the license on Twitter for the App, you access the "Dashb
 There are two ways of running the software: the manual and the automatic execution. 
 
 ### 5.2.1 The manual execution
+The manual execution is performed by launching the tweetpy.py command, specifying the input data with the following parameters.
+
+input:
+
+Parameter|Description|Exemple
+--------|--------|--------|--------
+  -h1  |  first hashtag to extract | Mandatory |-h1 "#Covid"
+  -h2 | second hashtag to extract |  Not mandatory| -h2 "#Covid-19"
+  -h3 |  third hashtag to extract  | Not mandatory | -h3 "#Coronavirus"
+  -h4  |   fourth hashtag to be extracted | Not mandatory  | -h4 "#swabs"
+  -h5  |  fifth hashtag to be extracted | Not mandatory| -h5 "#pandemic"
+  -UI | username of the user profile whose hashtag you want to extract | Mandatory | -UI "Agenzia_Ansa"
+
+As a result, the software extracts all the tweets related to the specified profile, containing the specified hashtags related to the day before the one when the script is launched. Consequently, the software produces the following output in csv format:
+
+description|likes|retweets| date
+--------|--------|--------|--------
+ Contains the text of the tweet, it may contain additional hashtags beyond those specified, links to other users and the news link, which leads the user directly to the Agency website Ansa |  Contains the number of likes of other users in a given news | Contains the number of shares of a tweet. How many times that tweet has been shared by other users |Contains the date of publication of the tweet on the user profile
+
+ Example of the manual execution:
+
+<i> python tweetpy -h1 "#Covid" -h2 "# Covid-19" -h3 "#Coronavirus" -h4 “#pandemic” -h5 “#swabs” -UI “Agenzia_Ansa”</i>
+
+Output:
+
+
+
+
 
 
 
