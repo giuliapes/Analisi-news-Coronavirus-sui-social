@@ -118,11 +118,8 @@ description|likes|retweets|date
 La #Scala, a unique first time of the #Covid. Stellar cast, scenography and the anthem sung by the workers #ANSA @teatroallascala https://t.co/lqP3I2uTGX |  14 | 4 |2020-12-06 08:50:02
 #Covid-19 #Usa, over a million cases in 5 #ANSA days https://t.co/Y7MwDsYHkL |16| 10|2020-12-06 09:50:02
 #Covid: 18,887 new cases and 564 victims in Italy in the last 24 hours #ANSA https://t.co/cYSbib309p| 31  | 9 | 2020-12-06 19:39:50
-
 #Covid, #Abruzzo ordinance: from tomorrow out of the red zone. Marsilio: 'It turns orange, I informed Speranza'. But government sources: 'It has to wait for Wednesday. The deadline of 21 days must be respected. No endorsement of decision on tomorrow '#ANSA https://t.co/jBqnUixYth | 41 | 9 | 2020-12-06 21:30:28
-
 #Covid: Abruzzo ordinance in force tomorrow, shops reopen. Sources Region: 'Valid measures, the Government can only challenge them'. Boccia: 'Abruzzo will be warned if orange from tomorrow' #ANSA https://t.co/6PA48XW7rM https://t.co/bEDKQ5ELb9| 71 | 41 | -2020-12-06 22:17:46
-
 #Covid Bavaria declares a state of calamity , new restrictions 'We must do more'. Lockdown even more severe #ANSA https://t.co/nOucqM5M0p| 42 |11 |2020-12-06 22:32:33
 
 
