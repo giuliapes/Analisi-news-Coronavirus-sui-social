@@ -52,7 +52,7 @@ As input, Tweetpy takes the file“ credentials.py ”to access the information 
 
 The following figure shows the structure and relationship between the scripts to help the user in reading the Tweetpy architecture. 
 
-![tweetpy atchitecture](/home/giulia/Immagini/Schermata da 2020-12-22 18-43-03.png?raw=true)
+![tweetpy atchitecture](/home/giulia/Immagini/Schermata da 2020-12-22 18-43-03.png)
 
 The figure above shows the software structure. On the one hand,  there is Twitter which contains the Twitter App that the user creates on twitter for the developer portal. These issues credentials, indicated with the name app TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_TOKEN_SECRET are saved in the “credentials.py” file. Within Twitter, there is also the user profile from which you wish to extrapolate the information contained in the tweets. An example would be that of any public user: tweet1, tweet2, ..., tweet n. Each tweet owns a certain type of hashtag, such as: tweet1 owns hashtag1 (# hash1), tweet2 owns hashtag1 and hashtag2 (# hash1 and # hash2) and tweet n owns hastag2 (# hash2). 
 Tweetpy is used by a user ("User Profile") who specifies a user profile and the hashtag he/ she searches, executes the file "tweetpy.py" which takes as input the "credentials.py" file to access Twitter, and produces as output a file called “data.csv” with a table containing the various tweets with the specified hashtags. 
