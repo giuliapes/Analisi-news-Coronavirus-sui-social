@@ -1,8 +1,25 @@
 # Tweetpy
 
-Software sviluppato in Python per l'estrazione automatica dei dati da Twitter. L'applicazione si concentra sull'estrazione di informazioni riguardanti il coronavirus da una nota agenzia di notizie su Twitter. Le informazioni estratte sono: descrizione della notizia, il numero di likes, il numero di retweets e la data del post stesso.
+## Abstract
 
-## Requisiti
+Tweetpy is a software developed in Python for the automatic extraction from Twitter of posts containing a maximum of 5 hashtags relating to a single user profile. 
+The information extracted is:  
+description: the text of the tweet with the related hashtags on the topic
+likes: number of likes that particular tweet has received 
+retweets: how many times that tweet has been shared by other users
+date: the day the tweet was published.
+
+Tweetpy extracts all hashtags within a time frame allowed by Twitter. As an example, the extraction of hashtags relating to Coronavirus is used, for example: #Covid, # Covid-19, #Coronavirus, #pandemic and #bampons.
+
+  ## System requirements
+
+- python 3
+
+
+|Package Name|Link|License|Version|
+|--------|--------|
+|  A  |  B  |
+|  C  |  D  |
 
 * è richiesto l'utilizzo di python3.
 * è richiesto la creazione e l'approvazione da parte di Twitter dell'App for developer, per poter ricevere le credenziali per l'estrazione dei dati.
