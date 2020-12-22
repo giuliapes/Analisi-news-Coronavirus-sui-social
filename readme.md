@@ -16,10 +16,9 @@ Tweetpy extracts all hashtags within a time frame allowed by Twitter. As an exam
 - python 3
 
 
-|Package Name|Link|License|Version|
-|--------|--------|
-|  A  |  B  |
-|  C  |  D  |
+Package Name|Link|License|Version
+--------|--------|--------|--------
+  A  |  B  | C | D
 
 * è richiesto l'utilizzo di python3.
 * è richiesto la creazione e l'approvazione da parte di Twitter dell'App for developer, per poter ricevere le credenziali per l'estrazione dei dati.
