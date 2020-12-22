@@ -53,7 +53,41 @@ As input, Tweetpy takes the file“ credentials.py ”to access the information 
 The following figure shows the structure and relationship between the scripts to help the user in reading the Tweetpy architecture. 
 
 
-![Components project](/home/giulia/Immagini/archittetura)
+![Components project]('/home/giulia/Immagini/archittetura')
+
+The figure above shows the software structure. On the one hand,  there is Twitter which contains the Twitter App that the user creates on twitter for the developer portal. These issues credentials, indicated with the name app TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_TOKEN_SECRET are saved in the “credentials.py” file. Within Twitter, there is also the user profile from which you wish to extrapolate the information contained in the tweets. An example would be that of any public user: tweet1, tweet2, ..., tweet n. Each tweet owns a certain type of hashtag, such as: tweet1 owns hashtag1 (# hash1), tweet2 owns hashtag1 and hashtag2 (# hash1 and # hash2) and tweet n owns hastag2 (# hash2). 
+Tweetpy is used by a user ("User Profile") who specifies a user profile and the hashtag he/ she searches, executes the file "tweetpy.py" which takes as input the "credentials.py" file to access Twitter, and produces as output a file called “data.csv” with a table containing the various tweets with the specified hashtags. 
+It is possible to make the automatic execution of the software using the execute.sh file which receives the same information, such as the specification of the user profile and the type of hashtag to search for. The execute.sh file is taken as input from a crontab file, which runs periodically and updates the data within the data.csv file.
+## 4.3 License
+
+Tweetpy is released under a General Public License, commonly referred to as GNU, which is a strongly copyleft license for free software. It is based on the freedom to use and share the Software according to your needs and the possibility of being able to make changes to the application itself. 
+# Using the software
+## 5.1 Installation
+
+Clone the repository with the git clone command from the terminal: https://github.com/giuliapes/Tweetpy 
+
+Create an account and the Twitter App for developer: https://developer.twitter.com/en 
+Extracting data from the Twitter news and microblogging service requires a license to access the “App for developer” section. It is necessary to fill in the following fields: 
+ 
+  - General information: where you live, how you would like to call yourself on the App
+  - The "In your words" section: description of the purpose for creating the App. For students or professors it is necessary to include the name of the school, the teacher and the number of the course
+  - The section "The specifics":
+      * Description of how the Twitter data will be used and any type of analysis you intend to carry out
+      * Description of use provided for the aforementioned functions
+      * List of all government entities to which you intend to provide Twitter content or derived information in this use case
+
+Once you have obtained the license on Twitter for the App, you access the "Dashboard" where, in the “Project App” section, you can find the necessary keys: “API key & secret” and “Access token & secret”. 
+
+  --> Install the modules listed in System requirements using python pip3: example: pip3 install csv
+  --> Create the "credentials.py" file by inserting your credentials issued by the App into the variables
+
+
+## 5.2 Running the software
+
+There are two ways of running the software: the manual and the automatic execution. 
+
+### 5.2.1 The manual execution
+
 
 
 
