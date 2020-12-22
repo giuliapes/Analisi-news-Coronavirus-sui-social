@@ -18,18 +18,14 @@ Tweetpy extracts all hashtags within a time frame allowed by Twitter. As an exam
 
 Package Name|Link|License|Version
 --------|--------|--------|--------
-  A  |  B  | C | D
+  tweepy  |  https://pypi.org/project/tweepy/ | MIT License | 3.9.0
+  time  |  https://pypi.org/project/python-time/  | MIT License | 0.1.2
+  csv |  https : //pypi.org/project/python-csv/  | MIT License | 0.0.13
+  argparse  |  https://pypi.org/project/argparse/  |  Python Software Foundation License | 1.4.0
+  datatime  |  https://pypi.org/project/DateTime /  | Zope Public License | 4.3
+  writer  |  https://pypi.org/project/Writer/  | MIT License | 0.1.4
+  crontab |  https://pypi.org/project/python-crontab/  | GNU Lesser General Public License  | 2.5.1
 
-* è richiesto l'utilizzo di python3.
-* è richiesto la creazione e l'approvazione da parte di Twitter dell'App for developer, per poter ricevere le credenziali per l'estrazione dei dati.
-* Sono richiesti i seguenti moduli, da installare mediante pip3:
-- tweepy: https://pypi.org/project/tweepy/
-- time: https://pypi.org/project/python-time/
-- csv: https://pypi.org/project/python-csv/
-- argparse: https://pypi.org/project/argparse/
-- datatime: https://pypi.org/project/DateTime/
-- writer: https://pypi.org/project/Writer/
-- crontab: https://pypi.org/project/python-crontab/
 
 ## Struttura del progetto
 
