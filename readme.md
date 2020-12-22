@@ -9,7 +9,7 @@ likes: number of likes that particular tweet has received
 retweets: how many times that tweet has been shared by other users
 date: the day the tweet was published.
 
-Tweetpy extracts all hashtags within a time frame allowed by Twitter. As an example, the extraction of hashtags relating to Coronavirus is used, for example: #Covid, # Covid-19, #Coronavirus, #pandemic and #bampons.
+Tweetpy extracts all hashtags within a time frame allowed by Twitter. As an example, the extraction of hashtags relating to Coronavirus is used, for example: #Covid, # Covid-19, #Coronavirus, #pandemic and #swabs.
 
   ## System requirements
 
@@ -26,35 +26,36 @@ Package Name|Link|License|Version
   writer  |  https://pypi.org/project/Writer/  | MIT License | 0.1.4
   crontab |  https://pypi.org/project/python-crontab/  | GNU Lesser General Public License  | 2.5.1
 
+## Software description
+### 4.1 The goal
 
-## Struttura del progetto
+The goal of Tweetpy is the extraction of tweets related to a given user profile, containing a maximum of 5 hashtags and dating back to the day before the current one. By launching Tweetpy once a day it is possible to retrieve the data daily and store it on a csv file for later analysis.
+The software was developed in Python and is capable of extracting different data.
+The example treated focuses on the extraction of news regarding the Coronavirus from a well-known information agency: Agenzia Ansa on Twitter. The keywords have been identified: Covid, Covid-19, Coronavirus, pandemic and swabs preceded by the hashtag (#Covid, # Covid-19, #Coronavirus, #pandemic and # swabs). 
+The data are extracted from pages on Twitter chosen by the user. 
+The information extracted is the following: 
+description: it presents a brief description of the news with the relative link. 
+likes: the number of likes that particular post has received 
+retweets: the number of times that particular post has been shared by different users
+date: the publication date of the post.
 
-- `credenziali.py` : file python, dove sono contenute le credenziali dell'App di Twitter per poter accedere alle informazioni che si vogliono estrarre.
-- `tweetpy.py` : file python, che esegue l'estrazione di dati: descrizione del tweet, numero di likes ricevuti su quel determinato tweet, numero di retweets e la data e orario in cui quel tweet è stato pubblicato.
-- `execute.sh` : file eseguibile shell, è uno script programmato che contiene i comandi per eseguire il programma a una determinato ora e giorno impostato attraverso crontab
-- `dati.csv`: file csv contenente i dati estratti attraverso tweetpyFinal: descrizione, n. di likes, n.di retweets e la data.
+### 4.2 Components
+The components that are part of the project are the following: 
 
-## Utilizzo
+- Twitter application: it is an application released by Twitter that makes credentials available to access the information contained on Twitter. The credentials are saved in a file called “credeniali.py”. 
+- User Profile: The user identifies a profile whose information contained in the tweets is to be downloaded. 
+- `tweetpy.py`: python file, which performs data extraction: description of the tweet, number of likes received on that particular tweet, number of retweets and the date and time when that tweet was published. “Tweetpy.py” receives in input the credentials plus the configuration from the user with respect to the information and outputs a .csv file containing the requested information. 
+`- execute.sh`: executable file sh, is a script that periodically updates the .csv file through the crontab file. 
 
-* Creare un account su https://developer.twitter.com/en, creare un'app compilando i campi richiesti come: lo scopo di utilizzo dell'App ecc....
-* Ottenuta l'autorizzazione, accedere al portale per programmatori: https://developer.twitter.com/en/portal/dashboard e su dashboard nella sezione Project app selezionare l'icona con la chiave. Memorizzare le chiavi contenute nella sezione :API key & secret e Access token & secret.
-* sul file `credenziali.py` salvare le credenziali memorizzate precedentemente attraverso delle variabili, chiamate: TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN e TWITTER_ACCESS_TOKEN_SECRET.
-* eseguire il file `tweetpy.py`, passando gli argomenti da linea di comando.
-* in alternativa impostare il crontab in modo che l'estrazione dei dati avvenga in automatico impostando una determinata ora. Le informazioni per impostare il crontab: https://alvinalexander.com/linux/linux-crontab-file-format-example/.
-* il file `execute.sh` eseguirà il file `tweetpy.py` alle 19 e 10 di ogni giorno.
-* i risultati verranno memorizzati nel file `dati.csv`.
 
-### Argomenti utilizzati:
+As input, Tweetpy takes the file“ credentials.py ”to access the information available on Twitter. As final output, Tweetpy produces a file in CSV format, named `data.csv`, containing the data extracted through“ tweetpy.py ”: description, number of likes, number of retweets and date.
 
-	- h1 seguito dall #Covid Obbligatorio
-	- h2 seguito dall #Covid-19 Facoltativo
-	- h3 seguito da #tamponi  Facoltativo
-	- h4 seguito dall'#Pandemia Facoltativo
-	- h5 seguito dall'#Coronavirus Facoltativo
-	- UI seguito da Agenzia_Ansa Obbligatorio
+The following figure shows the structure and relationship between the scripts to help the user in reading the Tweetpy architecture. 
 
-### Esempio:
 
-`` `
-$ python3 tweetpyFinal.py -h1 "#covid" -h2 "#Covid-19" -h3 "#Coronavirus" -h4 "#tamponi" -h5 "#pandemia" -UI "Agenzia_Ansa"
-`` `
+![Components project](/home/giulia/Immagini/archittetura)
+
+
+
+
+
