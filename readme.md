@@ -20,7 +20,7 @@ Package Name|Link|License|Version
 --------|--------|--------|--------
   tweepy  |  https://pypi.org/project/tweepy/ | MIT License | 3.9.0
   time  |  https://pypi.org/project/python-time/  | MIT License | 0.1.2
-  csv |  https : //pypi.org/project/python-csv/   | MIT License | 0.0.13
+  csv |  https://pypi.org/project/python-csv/   | MIT License | 0.0.13
   argparse  |  https://pypi.org/project/argparse/  |  Python Software Foundation License | 1.4.0
   datatime  |  https://pypi.org/project/DateTime/  | Zope Public License | 4.3
   writer  |  https://pypi.org/project/Writer/  | MIT License | 0.1.4
